@@ -1,0 +1,12 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+# Bytecode de Python
+__pycache__/
+*.pyc
+# Secretos
+.env
+# Datos
+data/
+
