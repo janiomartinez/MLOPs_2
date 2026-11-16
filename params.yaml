@@ -2,6 +2,6 @@ prepare:
   test_size: 0.2 # 20% para prueba, 80% para entrenar
   random_state: 42 # semilla para que la división sea reproducible
 train:
-  C: 1.0 # inverso de la regularización (menor C = más regularización)
+  C: 0.7 # inverso de la regularización (menor C = más regularización)
   max_iter: 1000 # máximo de iteraciones del optimizador
   random_state: 42
