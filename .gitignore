@@ -10,3 +10,6 @@ __pycache__/
 # Datos
 #data/
 
+# MLflow
+mlflow.db
+mlruns/
