@@ -8,5 +8,5 @@ __pycache__/
 # Secretos
 .env
 # Datos
-data/
+#data/
 
