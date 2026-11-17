@@ -5,8 +5,8 @@ stages:
     deps:
     - path: data/raw/Telco-Customer-Churn.csv
       hash: md5
-      md5: 3b0bfab28a8101b4e4fdd08025a5c235
-      size: 970457
+      md5: a21b1f170b3dea117ceddbea339dc0e7
+      size: 834989
     - path: src/prepare.py
       hash: md5
       md5: b1bc7b35e1919c0fe89bba7ccaf87e98
@@ -18,16 +18,16 @@ stages:
     outs:
     - path: data/processed
       hash: md5
-      md5: 9f738e773cbd1f99cffe8a15befe124a.dir
-      size: 892809
+      md5: 8900334568ca35c50665fa42407e27b4.dir
+      size: 762210
       nfiles: 2
   train:
     cmd: python src/train.py
     deps:
     - path: data/processed
       hash: md5
-      md5: 9f738e773cbd1f99cffe8a15befe124a.dir
-      size: 892809
+      md5: 8900334568ca35c50665fa42407e27b4.dir
+      size: 762210
       nfiles: 2
     - path: src/train.py
       hash: md5
@@ -41,23 +41,23 @@ stages:
     outs:
     - path: models/model.joblib
       hash: md5
-      md5: bc050bf40e4e6dc730d546ece6960e6b
+      md5: f6e655f026ab4fadf416cc2f4a3b99e8
       size: 8737
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: data/processed
       hash: md5
-      md5: 9f738e773cbd1f99cffe8a15befe124a.dir
-      size: 892809
+      md5: 8900334568ca35c50665fa42407e27b4.dir
+      size: 762210
       nfiles: 2
     - path: data/raw/Telco-Customer-Churn.csv
       hash: md5
-      md5: 3b0bfab28a8101b4e4fdd08025a5c235
-      size: 970457
+      md5: a21b1f170b3dea117ceddbea339dc0e7
+      size: 834989
     - path: models/model.joblib
       hash: md5
-      md5: bc050bf40e4e6dc730d546ece6960e6b
+      md5: f6e655f026ab4fadf416cc2f4a3b99e8
       size: 8737
     - path: src/evaluate.py
       hash: md5
@@ -66,5 +66,5 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: 1b6dffbb4b71c1bd33b397e249bb95db
-      size: 67
+      md5: ed5f607f9ab255f63709257b960fa6a0
+      size: 55
