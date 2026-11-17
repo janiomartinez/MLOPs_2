@@ -35,13 +35,13 @@ stages:
       size: 1539
     params:
       params.yaml:
-        train.C: 0.1
+        train.C: 1.0
         train.max_iter: 1000
         train.random_state: 42
     outs:
     - path: models/model.joblib
       hash: md5
-      md5: f6e655f026ab4fadf416cc2f4a3b99e8
+      md5: 5b80282e934460652b6a043f8b091806
       size: 8737
   evaluate:
     cmd: python src/evaluate.py
@@ -57,7 +57,7 @@ stages:
       size: 834989
     - path: models/model.joblib
       hash: md5
-      md5: f6e655f026ab4fadf416cc2f4a3b99e8
+      md5: 5b80282e934460652b6a043f8b091806
       size: 8737
     - path: src/evaluate.py
       hash: md5
@@ -66,5 +66,5 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: ed5f607f9ab255f63709257b960fa6a0
-      size: 55
+      md5: acbb71368f6c0afe4b50d89251ac6b02
+      size: 54
